@@ -1,6 +1,5 @@
 :root {
     --primary-blue: #0073cf;
-    --secondary-blue: #0058a3;
     --white: #ffffff;
     --overlay: rgba(255, 255, 255, 0.88);
     --shadow: 0 0 15px rgba(0, 0, 0, 0.25);
@@ -14,7 +13,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
 }
 
 header {
@@ -29,35 +27,38 @@ header h1 {
     font-size: 3rem;
 }
 
+main {
+    position: relative;
+}
+
 .hero img {
     width: 100%;
     display: block;
 }
 
+/* Mobile */
+
 .data-card,
 .weather-card {
-    text-align: center;
     background-color: #f5f5f5;
+    text-align: center;
     padding: 2rem;
-    border-top: 1px solid #ddd;
 }
 
 .data-card h2,
 .weather-card h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 .data-card p,
 .weather-card p {
-    font-size: 1.3rem;
-    margin: .8rem 0;
+    margin: 0.7rem 0;
 }
 
 .weather-icon {
-    width: 120px;
-    display: block;
-    margin: 1rem auto;
+    width: 80px;
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -68,16 +69,12 @@ footer {
     line-height: 1.6;
 }
 
-/* Desktop Layout */
+/* Desktop */
 
 @media screen and (min-width: 768px) {
 
-    main {
-        position: relative;
-    }
-
     .hero img {
-        height: 650px;
+        height: 700px;
         object-fit: cover;
     }
 
@@ -85,20 +82,20 @@ footer {
     .weather-card {
         position: absolute;
         background: var(--overlay);
-        backdrop-filter: blur(2px);
         box-shadow: var(--shadow);
+        backdrop-filter: blur(2px);
+        padding: 2rem;
+        width: 320px;
     }
 
     .data-card {
         top: 40px;
         left: 20px;
-        width: 320px;
     }
 
     .weather-card {
         right: 20px;
         bottom: 40px;
-        width: 320px;
     }
 
     .weather-card h2::after {

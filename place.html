@@ -22,10 +22,10 @@
         <picture class="hero">
             <source
                 media="(min-width: 768px)"
-                srcset="images/honduras-small">
+                srcset="images/honduras-large.webp">
 
             <img
-                src="images/honduras-large.webp"
+                src="images/honduras-small.webp"
                 alt="Beautiful landscape in Honduras"
                 width="1200"
                 height="800">
@@ -44,4 +44,32 @@
             <p><strong>Internet TLD:</strong> .hn</p>
         </section>
 
-        <
+        <section class="weather-card">
+            <h2>Weather</h2>
+
+            <img
+                class="weather-icon"
+                src="images/weather.svg"
+                alt="Weather icon">
+
+            <p><strong>Temperature:</strong> 22 °C</p>
+            <p><strong>Conditions:</strong> Sunny</p>
+            <p><strong>Wind:</strong> 10 km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            ©<span id="year"></span> Jorge Armando Centeno Cruz | Honduras
+        </p>
+
+        <p>
+            Last Modification:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+</body>
+</html>
